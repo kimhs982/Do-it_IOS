@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025B67092A53BA9B00EFA0AC /* lamp_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 025B67072A53BA9B00EFA0AC /* lamp_off.png */; };
+		025B670A2A53BA9B00EFA0AC /* lamp_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 025B67082A53BA9B00EFA0AC /* lamp_on.png */; };
 		02F0CFC42A51BC5600347C5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F0CFC32A51BC5600347C5E /* AppDelegate.swift */; };
 		02F0CFC62A51BC5600347C5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F0CFC52A51BC5600347C5E /* SceneDelegate.swift */; };
 		02F0CFC82A51BC5600347C5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F0CFC72A51BC5600347C5E /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		025B67072A53BA9B00EFA0AC /* lamp_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_off.png; sourceTree = "<group>"; };
+		025B67082A53BA9B00EFA0AC /* lamp_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_on.png; sourceTree = "<group>"; };
 		02F0CFC02A51BC5600347C5E /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F0CFC32A51BC5600347C5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02F0CFC52A51BC5600347C5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		02F0CFC22A51BC5600347C5E /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				025B67072A53BA9B00EFA0AC /* lamp_off.png */,
+				025B67082A53BA9B00EFA0AC /* lamp_on.png */,
 				02F0CFC32A51BC5600347C5E /* AppDelegate.swift */,
 				02F0CFC52A51BC5600347C5E /* SceneDelegate.swift */,
 				02F0CFC72A51BC5600347C5E /* ViewController.swift */,
@@ -130,7 +136,9 @@
 			files = (
 				02F0CFD02A51BC5700347C5E /* LaunchScreen.storyboard in Resources */,
 				02F0CFCD2A51BC5700347C5E /* Assets.xcassets in Resources */,
+				025B670A2A53BA9B00EFA0AC /* lamp_on.png in Resources */,
 				02F0CFCB2A51BC5600347C5E /* Main.storyboard in Resources */,
+				025B67092A53BA9B00EFA0AC /* lamp_off.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
