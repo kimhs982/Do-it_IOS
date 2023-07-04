@@ -10,6 +10,7 @@ import UIKit
 protocol EditDelegate {
     func didMessageEditDone(_ controller: EditViewController, message: String)
     func didImageOnOffDone(_ controller: EditViewController, isOn: Bool)
+    func didImageZoomInOutDone(_ controller: EditViewController, isZoom: Bool)
 }
 
 class EditViewController: UIViewController {
@@ -18,10 +19,12 @@ class EditViewController: UIViewController {
     var textMessage: String = ""
     var delegate: EditDelegate?
     var isOn = false
+    var isZoom = false
     
     @IBOutlet var lblWay: UILabel!
     @IBOutlet var txMessage: UITextField!
     @IBOutlet var swIsOn: UISwitch!
+    @IBOutlet var btnZoom: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,11 @@ class EditViewController: UIViewController {
         lblWay.text = textWayValue
         txMessage.text = textMessage
         swIsOn.isOn = isOn
+        if isZoom {
+            btnZoom.setTitle("축소", for: UIControl.State())
+        } else {
+            btnZoom.setTitle("확대", for: .normal)
+        }
     }
     
     @IBAction func btnDone(_ sender: UIButton) {
@@ -37,6 +45,7 @@ class EditViewController: UIViewController {
         if delegate != nil {
             delegate?.didMessageEditDone(self, message: txMessage.text!)
             delegate?.didImageOnOffDone(self, isOn: isOn)
+            delegate?.didImageZoomInOutDone(self, isZoom: isZoom)
         }
         // 메인화면으로 이동하기
         _ = navigationController?.popViewController(animated: true)
@@ -49,6 +58,15 @@ class EditViewController: UIViewController {
         } else {
             isOn = false
         }
+    }
+    
+    @IBAction func btnIsZoomInOut(_ sender: UIButton) {
+        if isZoom {
+            sender.setTitle("확대", for: UIControl.State())
+        } else {
+            sender.setTitle("축소", for: UIControl.State())
+        }
+        isZoom = !isZoom
     }
     
     /*

@@ -113,12 +113,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDz-to-Wey">
+                                <rect key="frame" x="185" y="171" width="54" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="확대"/>
+                                <connections>
+                                    <action selector="btnIsZoomInOut:" destination="UKw-Uf-aBP" eventType="touchUpInside" id="Qg7-hN-O9y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K9N-aQ-AfQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="수정화면" id="chK-s1-Dmr"/>
                     <connections>
+                        <outlet property="btnZoom" destination="kDz-to-Wey" id="wd2-8b-n8V"/>
                         <outlet property="lblWay" destination="MbW-5s-n2v" id="RXF-mf-LFF"/>
                         <outlet property="swIsOn" destination="Wwv-9y-iS5" id="7RO-z3-82M"/>
                         <outlet property="txMessage" destination="jAL-UM-qBF" id="whf-hT-075"/>
